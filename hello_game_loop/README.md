@@ -11,4 +11,4 @@
 
 <!-- <video src="assets/screen_record.mp4" controls></video> -->
 
-[](README.md) <video controls src="assets/screen_record.mp4" ></video>
+![Demo preview](assets/screen_record.gif)
