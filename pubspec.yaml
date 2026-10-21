@@ -1,0 +1,9 @@
+name: flame_lessons
+
+environment:
+  sdk: ^3.13.5
+
+workspace:
+  - hello_game_loop
+
+
