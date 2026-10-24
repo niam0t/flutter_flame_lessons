@@ -10,7 +10,9 @@ import 'package:flame/input.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
-class BrickBall() extends FlameGame with KeyboardEvents, TapCallbacks {
+class BrickBall()
+    extends FlameGame
+    with HasCollisionDetection, KeyboardEvents, TapCallbacks {
   this
     : super(
         camera: CameraComponent.withFixedResolution(
@@ -85,7 +87,7 @@ class BrickBall() extends FlameGame with KeyboardEvents, TapCallbacks {
     if (playState == .playing) return;
 
     world.removeAll(world.children.query<Ball>());
-    world.removeAll(world.children.query<Brick>());
+    // world.removeAll(world.children.query<Brick>());
     world.removeAll(world.children.query<Bat>());
 
     playState = .playing;

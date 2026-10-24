@@ -28,31 +28,30 @@ class Ball({
   }
 
   @override
-  void onCollisionStart(
-    Set<Vector2> intersectionPoints,
-    PositionComponent other,
-  ) {
-    super.onCollisionStart(intersectionPoints, other);
-
-    final double left = 0, top = 0;
-    final double right = game.width, bottom = game.height;
+  void onCollision(Set<Vector2> intersectionPoints, PositionComponent other) {
+    super.onCollision(intersectionPoints, other);
 
     if (other is PlayArea) {
-      if (intersectionPoints.first.x <= left ||
-          intersectionPoints.first.x >= right) {
+      if (intersectionPoints.first.x <= 0) {
         velocity.x = -velocity.x;
-      } else if (intersectionPoints.first.y <= top) {
+        if (velocity.x == 0) velocity.x++;
+      } else if (intersectionPoints.first.x >= game.width) {
+        velocity.x = -velocity.x;
+      } else if (intersectionPoints.first.y <= 0) {
         velocity.y = -velocity.y;
-      } else if (intersectionPoints.first.y >= bottom) {
+        if (velocity.y == 0) velocity.y++;
+      } else if (intersectionPoints.first.y >= game.height) {
         removeFromParent();
         game.playState = .gameOver;
         add(RemoveEffect(delay: 0.35));
       }
-    } else if (other is Bat) {
+    }
+    if (other is Bat) {
       velocity.y = -velocity.y;
       velocity.x +=
           (position.x - other.position.x) / other.size.x * game.width * 0.3;
-    } else if (other is Brick) {
+    }
+    if (other is Brick) {
       if (position.y < other.position.y - other.size.y / 2 ||
           position.y > other.position.y + other.size.y) {
         velocity.y = -velocity.y;
@@ -61,8 +60,7 @@ class Ball({
         velocity.x = -velocity.x;
       }
       velocity.setFrom(velocity * difficultyModifier);
-    } else {
-      print("collision with $other");
     }
+    print("collision with $other");
   }
 }
