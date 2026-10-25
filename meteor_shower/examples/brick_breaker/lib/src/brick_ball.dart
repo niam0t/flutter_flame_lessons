@@ -1,14 +1,15 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:brick_breaker/src/components/components.dart';
-import 'package:brick_breaker/src/config.dart';
 import 'package:flame/components.dart';
 import 'package:flame/events.dart';
 import 'package:flame/game.dart';
 import 'package:flame/input.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+
+import 'components/components.dart';
+import 'config.dart';
 
 class BrickBall()
     extends FlameGame

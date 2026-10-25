@@ -1,7 +1,8 @@
-import 'package:brick_breaker/src/brick_ball.dart';
-import 'package:brick_breaker/src/config.dart';
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
+
+import 'brick_ball.dart';
+import 'config.dart';
 
 class GameApp extends StatelessWidget {
   const GameApp({super.key});

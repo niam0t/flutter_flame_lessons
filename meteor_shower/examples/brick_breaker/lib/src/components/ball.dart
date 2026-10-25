@@ -1,9 +1,10 @@
-import 'package:brick_breaker/src/brick_ball.dart';
-import 'package:brick_breaker/src/components/components.dart';
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flame/effects.dart';
 import 'package:flutter/material.dart';
+
+import '../brick_ball.dart';
+import 'components.dart';
 
 class Ball({
   required final Vector2 velocity,

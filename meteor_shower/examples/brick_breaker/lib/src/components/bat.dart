@@ -1,10 +1,11 @@
 import 'dart:ui';
 
-import 'package:brick_breaker/src/brick_ball.dart';
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flame/effects.dart';
 import 'package:flame/events.dart';
+
+import '../brick_ball.dart';
 
 class Bat({
   required final Radius cornerRadius,

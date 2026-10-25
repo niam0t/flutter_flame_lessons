@@ -3,8 +3,6 @@ description: "A new Flutter project."
 publish_to: "none"
 version: 0.1.1
 
-resolution: workspace
-
 environment:
     sdk: ^3.13.5
 
@@ -14,8 +12,9 @@ dependencies:
     flame: ^1.28.1
     flutter_animate: ^4.5.2
     google_fonts: ^9.0.0
-    result_rust:
-        path: ../../../packages/result_rust
+    result_dart:
+        git: https://github.com/niam0t/result_dart
+
     material_ui: ^1.8.0
 dev_dependencies:
     flutter_test:
