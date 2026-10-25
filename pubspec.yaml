@@ -5,5 +5,5 @@ environment:
 
 workspace:
   - hello_game_loop
-
-
+  - meteor_shower
+  - brick_breaker
