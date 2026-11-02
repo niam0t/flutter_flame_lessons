@@ -8,3 +8,5 @@
   * [x] Create bricks with `CollisionCallbacks`. When the ball hits a brick, remove the brick.
 * **Hint:** What is the difference between `onCollisionStart` and `onCollision`? How do you stop the ball from passing through the paddle?
 * **Resource:** Flame docs: *Collision Detection*.
+
+![Demo preview](assets/screen_record.gif)
