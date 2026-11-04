@@ -2,25 +2,15 @@
 
 ## Phase 0 — Foundation (No Flame yet)
 
-* [x] [**Project 0: “Hello, Game Loop” (Pure Flutter)**](hello_game_loop/README.md)
+* [X] [**Project 0: “Hello, Game Loop” (Pure Flutter)**](hello_game_loop/README.md)
 
 ---
 
 ## Phase 1 — Flame Fundamentals (One Concept Per Project)
 
-* [x] [**Project 1: “Meteor Shower” (Components & Randomness)**](meteor_shower/README.md)
-
-* [x] [**Project 2: “Brick Breaker” (Collision & Input)**](brick_breaker/README.md)
-
-### **Project 3: “Top-Down Walker” (Camera & Zoom)**
-
-* **Objective:** Implement a camera that follows a player and zooms.
-* **Tasks:**
-  * [ ] Create a large world (e.g., a big rectangle) and a small player square.
-  * [ ] Add a `CameraComponent` and a `World`. Make the camera follow the player smoothly (use `camera.follow(player)`).
-  * [ ] Add two UI buttons (Flutter `Overlay` widgets) to call `camera.viewfinder.zoomTo(...)` for zoom in/out.
-* **Hint:** What is the relationship between the `World` and the `CameraComponent`? Why doesn't the UI zoom with the world?
-* **Resource:** Flame docs: *Camera & Viewport*.
+* [X] [Project 1: “Meteor Shower” (Components & Randomness)](meteor_shower/README.md)
+* [X] [Project 2: “Brick Breaker” (Collision & Input)](brick_breaker/README.md)
+* [x] [Project 3: “Top-Down Walker” (Camera & Zoom)](top_down_walker/README.md)
 
 ---
 
@@ -52,9 +42,11 @@
 
 * **Objective:** Implement projectile and instant-hit attacks.
 * **Tasks:**
+
 * [ ] **Bomb:** Spawn a bomb component that arcs (simple physics) and creates an explosion (an area collision) after a timer.
 * [ ] **Melee:** On button press, check for enemies within a short radius using `HasCollisionDetection` or a simple distance check.
 * [ ] Both attacks consume separate "bomb" and "melee" counters.
+
 * **Hint:** How can you use `TimerComponent` for the bomb fuse? For melee, is it easier to use a circle hitbox that is only active for a few frames?
 * **Resource:** Flame docs: *Effects & Timers*.
 
